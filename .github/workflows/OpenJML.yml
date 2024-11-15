@@ -48,4 +48,6 @@ jobs:
     - name: Run OpenJML Verification
       run: |
         # Run OpenJML on specified Java files or project
-        $HOME/openjml/openjml -esc ./src/main/java/com/mycompany/app*.java
+        # Find all Java files in src and pass them to OpenJML
+        JAVA_FILES=$(find ./ -name "*.java")
+        $HOME/openjml/openjml -esc $JAVA_FILES
