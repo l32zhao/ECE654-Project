@@ -15,11 +15,11 @@ public class App {
     }
 
     //@ ensures \result != null;
-    public String getMessage() {
-        if (MESSAGE == null) {
-            return "Default Message"; // Or handle null case as needed
-        } else {
-            return MESSAGE;
-        }
-    }
+//    public String getMessage() {
+//        if (MESSAGE == null) {
+//            return "Default Message"; // Or handle null case as needed
+//        } else {
+//            return MESSAGE;
+//        }
+//    }
 }
