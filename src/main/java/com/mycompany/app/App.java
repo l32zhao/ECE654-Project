@@ -8,6 +8,8 @@ public class App {
     //@ non_null
     private static final String MESSAGE = "Hello World!";
 
+    //@ invariant MESSAGE != null && MESSAGE instanceof CharSequence;
+
     public App() {}
 
     public static void main(String[] args) {
@@ -15,11 +17,9 @@ public class App {
     }
 
     //@ ensures \result != null;
-//    public String getMessage() {
-//        if (MESSAGE == null) {
-//            return "Default Message"; // Or handle null case as needed
-//        } else {
-//            return MESSAGE;
-//        }
-//    }
+    public String getMessage() {
+
+        //@ assume MESSAGE != null;
+        return MESSAGE;
+    }
 }
