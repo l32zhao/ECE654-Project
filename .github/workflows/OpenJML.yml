@@ -41,14 +41,11 @@ jobs:
         unzip openjml-ubuntu-22.04-0.21.0-alpha-0.zip -d $HOME/openjml
         # List contents to verify the path
         ls -R $HOME/openjml
-        # Add OpenJML to the PATH
-        export PATH=$PATH:$HOME/openjml/bin
-        # Verify OpenJML installation
-        openjml -help || echo "OpenJML command not found"
+
         export PATH=$PATH:$HOME/openjml
         export PATH=$PATH:$HOME/openjml/bin
 
     - name: Run OpenJML Verification
       run: |
         # Run OpenJML on specified Java files or project
-        openjml -esc ./src/main/java/com/mycompany/app*.java
+        $HOME/openjml/openjml -esc ./src/main/java/com/mycompany/app*.java
