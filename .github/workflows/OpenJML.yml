@@ -38,8 +38,8 @@ jobs:
       run: |
         # Commands to install OpenJML
         wget https://github.com/OpenJML/OpenJML/releases/download/0.21.0-alpha-0/openjml-ubuntu-22.04-0.21.0-alpha-0.zip
-        unzip openjml-ubuntu-22.04-0.21.0-alpha-0.zip -d /usr/local/openjml
-        export PATH=$PATH:/usr/local/openjml/bin
+        unzip openjml-ubuntu-22.04-0.21.0-alpha-0.zip -d $HOME/openjml
+        export PATH=$PATH:$HOME/openjml/bin
 
     - name: Run OpenJML Verification
       run: |
