@@ -16,8 +16,10 @@ public class App {
 
     //@ ensures \result != null;
     public String getMessage() {
-
-        //@ assume MESSAGE != null;
-        return MESSAGE;
+        if (MESSAGE == null) {
+            return "Default Message"; // Or handle null case as needed
+        } else {
+            return MESSAGE;
+        }
     }
 }
