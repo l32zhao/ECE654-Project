@@ -2,8 +2,7 @@ public class Account {
     private int accountID;
     private double balance;
 
-    //@ public model double specBalance; // Expose balance for specifications.
-    //@ private represents specBalance = balance; // Link specBalance to balance.
+    //@ public model double specBalance;
 
     //@ public invariant specBalance >= 0; // Balance must always be non-negative.
 
@@ -12,6 +11,7 @@ public class Account {
     public Account(int accountID, double initialBalance) {
         this.accountID = accountID;
         this.balance = initialBalance;
+        //@ set specBalance = initialBalance; // Set specBalance explicitly.
     }
 
     //@ requires amount > 0; // Deposit amount must be positive.
@@ -19,6 +19,7 @@ public class Account {
     public void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
+            //@ set specBalance = balance; // Update specBalance explicitly.
         }
     }
 
@@ -27,6 +28,7 @@ public class Account {
     public void withdraw(double amount) {
         if (amount > 0 && amount <= balance) {
             balance -= amount;
+            //@ set specBalance = balance; // Update specBalance explicitly.
         }
     }
 
