@@ -16,9 +16,7 @@ public class App {
         System.out.println(MESSAGE);
     }
 
-    //@ ensures \result != null;
 //    public String getMessage() {
-//        //@ assume MESSAGE != null;
 //        return MESSAGE;
 //    }
 }
