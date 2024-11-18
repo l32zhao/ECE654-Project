@@ -17,9 +17,8 @@ public class App {
     }
 
     //@ ensures \result != null;
-    public String getMessage() {
-
-        //@ assume MESSAGE != null;
-        return MESSAGE;
-    }
+//    public String getMessage() {
+//        //@ assume MESSAGE != null;
+//        return MESSAGE;
+//    }
 }
