@@ -1,9 +1,9 @@
 public class Account {
     private int accountID;
-    protected double balance;
+    private double balance;
 
     //@ public model double specBalance; // Expose balance for specifications.
-    //@ private represents specBalance = balance; // Explicitly set to private visibility
+    //@ private represents specBalance = balance; // Link specBalance to balance.
 
     //@ public invariant specBalance >= 0; // Balance must always be non-negative.
 
