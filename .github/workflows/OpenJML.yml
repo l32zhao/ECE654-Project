@@ -50,4 +50,7 @@ jobs:
         # Run OpenJML on specified Java files or project
         # Find all Java files in src and pass them to OpenJML
         JAVA_FILES=$(find ./ -name "*App.java")
+        pwd
         $HOME/openjml/openjml -esc $JAVA_FILES
+        $HOME/openjml/openjml -rac src/main/java/com/mycompany/app/Account.java
+        java -cp . src.main.java.com.mycompany.app.Account
